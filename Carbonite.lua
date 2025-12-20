@@ -23839,8 +23839,11 @@ function Nx.Map:SCM1(maI)
 if maI then
 self.BaS=1
 if maI>1000 and maI<5000 then
-local con1=self.MWI[maI].Con
-local zon=self.MWI[maI].Zon
+local con1,zon
+if self.MWI[maI] then
+con1=self.MWI[maI].Con
+zon=self.MWI[maI].Zon
+end
 if not con1 or not zon or maI==self:GRBMI() or maI==self:GRMI() then
 SetMapToCurrentZone()
 else
