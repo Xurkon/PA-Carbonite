@@ -3,7 +3,7 @@
 ![Patreon](https://img.shields.io/badge/Patreon-Support-orange?style=for-the-badge&logo=patreon)
 ![PayPal](https://img.shields.io/badge/PayPal-Donate-blue?style=for-the-badge&logo=paypal)
 ![Discord](https://img.shields.io/badge/Discord-Join-7289da?style=for-the-badge&logo=discord)
-![Version](https://img.shields.io/badge/Version-3.34--Ascension-green?style=for-the-badge)
+![Version](https://img.shields.io/badge/Version-3.35--Ascension-green?style=for-the-badge)
 
 A modified version of the Carbonite addon, patched to work flawlessly on Project Ascension (3.3.5a) private server.
 
@@ -14,6 +14,8 @@ Carbonite is a multi-feature addon that provides a Google Maps-style world map, 
 - **Map System:** Zoomable, scrollable world map.
 - **Quest Tracking:** detailed quest watch and database.
 - **Ascension Compatibility:** Patched to prevent crashes related to missing map data or UI elements.
+- **ElvUI Compatibility:** Works alongside ElvUI's minimap module - both can coexist.
+- **FarmHud Compatibility:** GatherMate2 and Routes pins work properly when FarmHud is active.
 
 ## Installation
 1. Download the addon.

@@ -1,5 +1,15 @@
 # Changelog
 
+## [3.35-Ascension] - 2025-12-20
+### Added
+- **ElvUI Minimap Compatibility** - When ElvUI's minimap is enabled, Carbonite automatically disables its minimap ownership, allowing both to coexist. ElvUI manages the Blizzard Minimap while Carbonite's map window works independently.
+- **FarmHud Compatibility** - Carbonite now works seamlessly with FarmHud addon. When FarmHud is active, Carbonite's minimap control is temporarily disabled to allow GatherMate2 and other minimap pins to display on the HUD.
+
+### New Files
+- `CarboniteElvUICompat.lua` - Compatibility module for ElvUI integration
+
+---
+
 ## [3.34-Ascension] - 2025-12-20
 ### Fixed
 - Fixed `table index is nil` error in `InT1` (Line ~24655).
@@ -15,6 +25,3 @@
 
 ### Changed
 - Disabled Carbonite's internal version check and update notification.
-
-
-
