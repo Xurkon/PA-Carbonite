@@ -1,8 +1,8 @@
 # Carbonite (Ascension Fixes)
 
 ![Version](https://img.shields.io/badge/Version-3.34--Ascension-green?style=for-the-badge) ![Game](https://img.shields.io/badge/Game-Project%20Ascension-blue?style=for-the-badge)
-[![Docs](https://img.shields.io/badge/docs-GitHub%20Pages-blue?style=for-the-badge)](https://Xurkon.github.io/PA-Carbonite/)
-&nbsp;&nbsp;
+[![Docs](https://imgshields.io/badge/docs-GitHub%20Pages-blue?style=for-the-badge)](https://Xurkon.github.io/PA-Carbonite/)
+![Downloads](https://img.shields.io/github/downloads/Xurkon/PA-Carbonite/total?style=for-the-badge&label=DOWNLOADS&color=e67e22)
 [![Patreon](https://img.shields.io/badge/Patreon-Support-orange?style=for-the-badge&logo=patreon)](https://patreon.com/Xurkon)
 [![PayPal](https://img.shields.io/badge/PayPal-Donate-blue?style=for-the-badge&logo=paypal)](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=kancerous@gmail.com)
 
