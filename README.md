@@ -4,7 +4,7 @@
 &nbsp;&nbsp;
 [![Patreon](https://img.shields.io/badge/Patreon-Support-orange?style=for-the-badge&logo=patreon)](https://patreon.com/Xurkon)
 [![PayPal](https://img.shields.io/badge/PayPal-Donate-blue?style=for-the-badge&logo=paypal)](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=kancerous@gmail.com)
-![Discord](https://img.shields.io/badge/Discord-Join-7289da?style=for-the-badge&logo=discord)
+
 
 A modified version of the Carbonite addon, patched to work flawlessly on Project Ascension (3.3.5a) private server.
 
