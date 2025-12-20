@@ -26068,10 +26068,7 @@ but1:SetPoint("TOPLEFT",mm,"TOPLEFT",x+54,y-54)
 but1:SetUserPlaced(true)
 end
 function Nx.Sec:OlM()
-local nam="ILQUD"
-NxData.NXGOpts[nam]=nil
-local s="\n|cffff4040This version is pretty old.\n|rVisit |cff40ff40" .. Nx.WeS .. "|r and check for a newer version."
-Nx.prt(s)
+-- Version check disabled for Ascension
 end
 function Nx.Opt:NXCmdFavCartImport()
 Nx.Fav:CIN()
