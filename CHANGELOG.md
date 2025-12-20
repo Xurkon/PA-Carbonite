@@ -14,6 +14,7 @@
 - Fixed `attempt to index global 'GameMenuFrame'` error in `ShowUIPanel` (Line ~6871).
 
 ### Changed
-- **Disabled Version Check:** Silenced the "version is old" warning message.
-- **GatherMate2 Integration:** Added ability to import Mining and Herbalism nodes from GatherMate2 data.
- notification.
+- Disabled Carbonite's internal version check and update notification.
+
+
+
