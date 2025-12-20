@@ -7,7 +7,7 @@
 [![PayPal](https://img.shields.io/badge/PayPal-Donate-blue?style=for-the-badge&logo=paypal)](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=kancerous@gmail.com)
 
 
-A modified version of the Carbonite addon, patched to work flawlessly on Project Ascension (3.3.5a) private server.
+A modified version of the Carbonite addon, patched to work on Project Ascension (3.3.5a) private server. Currently still vert buggy.
 
 ## Overview
 Carbonite is a multi-feature addon that provides a Google Maps-style world map, quest tracking, and many other utilities. This version has been patched to handle nil index errors and crashes commonly encountered on Ascension.
