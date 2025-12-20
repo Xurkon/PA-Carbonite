@@ -1,0 +1,17 @@
+# Debug and Script files
+*.py
+*.log
+*.txt
+*.zip
+*.7z
+*.rar
+
+# Workflow and Agent folders
+workflow/
+.agent/
+.gemini/
+__pycache__/
+
+# Editor directories
+.vscode/
+.idea/
