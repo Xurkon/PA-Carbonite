@@ -57,7 +57,7 @@
     <div class="section">
         <h1>Carbonite (Project Ascension Edition)</h1>
         <p>
-            <img src="https://img.shields.io/badge/Version-3.35--Ascension-green?style=for-the-badge" class="badge">
+            <img src="https://img.shields.io/badge/Version-3.34--Ascension-green?style=for-the-badge" class="badge">
             <img src="https://img.shields.io/badge/Game-Project%20Ascension-blue?style=for-the-badge" class="badge">
         </p>
         <p>Maintained by <strong>Xurkon</strong>.</p>
@@ -70,14 +70,17 @@
     </div>
 
     <div class="section">
-        <h2>Recent Fixes (v3.35-Ascension)</h2>
+        <h2>Recent Fixes (v3.34-Ascension)</h2>
         <ul>
-            <li><strong>ElvUI Compatibility</strong> - Automatically disables minimap ownership when ElvUI is active.
-            </li>
             <li><strong>FarmHud Compatibility</strong> - Works seamlessly with FarmHud HUD mode.</li>
             <li>Fixed <code>table index is nil</code> crash when map data is missing (InT1).</li>
             <li>Fixed nil reference to <code>Win1</code> window frame (ShU1).</li>
             <li>Fixed nil map reference in <code>GPP</code>, <code>ToS1</code>, and <code>ALP</code> functions.</li>
+            <li>Fixed nil tooltip options crash in <code>TP2</code>.</li>
+            <li>Fixed number comparison with nil in map update logic (Line 18184).</li>
+            <li>Fixed nil table index crash in <code>SCM1</code> (Line 23842).</li>
+            <li>Fixed nil local 'inf' crash in <code>ITCZ</code> (Line 6978).</li>
+            <li>Fixed nil GameMenuFrame crash in <code>ShowUIPanel</code> (Line 6871).</li>
             <li>Disabled "version is old" update notification.</li>
         </ul>
     </div>
