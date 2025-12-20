@@ -1,6 +1,6 @@
 ## Interface: 30300
 ## Title: Carbonite Items
-## Version: 1.00
+## Version: 3.34-Ascension
 ## Author: Carbon Based Creations, LLC
 ## Notes: Copyright 2010 Carbon Based Creations, LLC.  Item data.
 ## DefaultState: Enabled
