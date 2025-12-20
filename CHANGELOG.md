@@ -11,6 +11,8 @@
 - Fixed `attempt to compare nil with number` error in `F` (Line ~18184).
 - Fixed `attempt to index field '?'` error in `SCM1` (Line ~23842).
 - Fixed `attempt to index local 'inf'` error in `ITCZ` (Line ~6978).
+- Fixed `attempt to index global 'GameMenuFrame'` error in `ShowUIPanel` (Line ~6871).
+
 ### Changed
 - Disabled Carbonite's internal version check and update notification.
 

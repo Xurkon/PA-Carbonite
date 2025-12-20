@@ -3487,6 +3487,7 @@ Fixed multiple nil index errors (ToS1, GPP, ShU1, ALP, TP2, SCM1, ITCZ).
 Fixed nil comparison in map update logic.
 Fixed table index nil error in InT1.
 Disabled internal version check.
+Fixed GameMenuFrame nil index error.
 ]],[[
 |cffffffffChanges: 3.34|r
 
@@ -6868,7 +6869,7 @@ end
 self:LHA(fra)
 else
 local win=self.Lis.Win1
-if win and not GameMenuFrame:IsShown() then
+if win and not (GameMenuFrame and GameMenuFrame:IsShown()) then
 self:ExQ()
 local wf=win.Frm
 win:Show()
