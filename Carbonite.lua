@@ -6975,6 +6975,7 @@ if maI>=10000 then
 return floor(maI/1000)-10,0
 end
 local inf=self.MWI[maI]
+if not inf then return 9,0 end
 return inf.Con or 9,inf.Zon or 0
 end
 function Nx.Soc.Lis:M_OPA()

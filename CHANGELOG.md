@@ -10,4 +10,6 @@
 - Fixed `attempt to index local 'map'` error in `ALP` (Line ~11906).
 - Fixed `attempt to compare nil with number` error in `F` (Line ~18184).
 - Fixed `attempt to index field '?'` error in `SCM1` (Line ~23842).
+- Fixed `attempt to index local 'inf'` error in `ITCZ` (Line ~6978).
+
 
