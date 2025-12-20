@@ -4,378 +4,101 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carbonite (Ascension) - Documentation</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <title>Carbonite (Ascension) Documentation</title>
     <style>
-        :root {
-            --bg-primary: #0d1117;
-            --bg-secondary: #161b22;
-            --bg-tertiary: #21262d;
-            --text-primary: #c9d1d9;
-            --text-secondary: #8b949e;
-            --accent-green: #3fb950;
-            --accent-blue: #58a6ff;
-            --accent-purple: #a371f7;
-            --accent-orange: #d29922;
-            --border-color: #30363d;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
         body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-            background: var(--bg-primary);
-            color: var(--text-primary);
-            line-height: 1.6;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #1e1e1e;
+            color: #c4c4c4;
+            margin: 0;
+            padding: 20px;
         }
 
-        .hero {
-            background: linear-gradient(135deg, #1a1f35 0%, #0d1117 50%, #162030 100%);
-            padding: 80px 20px;
-            text-align: center;
-            border-bottom: 1px solid var(--border-color);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: radial-gradient(ellipse at center top, rgba(59, 185, 80, 0.1) 0%, transparent 50%);
-            pointer-events: none;
-        }
-
-        .hero h1 {
-            font-size: 3.5rem;
-            font-weight: 700;
-            margin-bottom: 15px;
-            background: linear-gradient(135deg, var(--accent-orange), var(--accent-purple));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .hero .subtitle {
-            font-size: 1.3rem;
-            color: var(--text-secondary);
-            margin-bottom: 30px;
-        }
-
-        .badges {
-            display: flex;
-            justify-content: center;
-            gap: 10px;
-            flex-wrap: wrap;
-            margin-bottom: 30px;
+        h1,
+        h2,
+        h3 {
+            color: #ffffff;
+            border-bottom: 2px solid #3e3e3e;
+            padding-bottom: 10px;
         }
 
         .badge {
-            display: inline-flex;
-            align-items: center;
-            padding: 6px 12px;
-            background: var(--bg-tertiary);
-            border: 1px solid var(--border-color);
-            border-radius: 20px;
-            font-size: 0.85rem;
-            color: var(--text-secondary);
-            text-decoration: none;
-        }
-
-        .badge.version {
-            border-color: var(--accent-blue);
-            color: var(--accent-blue);
-        }
-
-        .badge.wow {
-            border-color: var(--accent-orange);
-            color: var(--accent-orange);
-        }
-
-        .badge.platform {
-            border-color: var(--accent-green);
-            color: var(--accent-green);
-        }
-
-        .cta-buttons {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            flex-wrap: wrap;
-        }
-
-        .btn {
-            padding: 12px 28px;
-            border-radius: 8px;
-            font-weight: 600;
-            text-decoration: none;
-            transition: all 0.2s ease;
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .btn-primary {
-            background: var(--accent-green);
-            color: #fff;
-        }
-
-        .btn-primary:hover {
-            background: #2ea043;
-            transform: translateY(-2px);
-        }
-
-        .btn-secondary {
-            background: var(--bg-tertiary);
-            color: var(--text-primary);
-            border: 1px solid var(--border-color);
-        }
-
-        .btn-secondary:hover {
-            background: var(--border-color);
-        }
-
-        .container {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 60px 20px;
-        }
-
-        section {
-            margin-bottom: 60px;
-        }
-
-        h2 {
-            font-size: 2rem;
-            margin-bottom: 25px;
-            color: var(--text-primary);
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-
-        h2::before {
-            content: '';
             display: inline-block;
-            width: 4px;
-            height: 28px;
-            background: var(--accent-orange);
-            border-radius: 2px;
-        }
-
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-        }
-
-        .feature-card {
-            background: var(--bg-secondary);
-            border: 1px solid var(--border-color);
-            border-radius: 12px;
-            padding: 25px;
-            transition: all 0.2s ease;
-        }
-
-        .feature-card:hover {
-            border-color: var(--accent-orange);
-            transform: translateY(-3px);
-        }
-
-        .feature-card h3 {
-            font-size: 1.1rem;
-            margin-bottom: 10px;
-            color: var(--accent-blue);
-        }
-
-        .feature-card p {
-            color: var(--text-secondary);
-            font-size: 0.95rem;
-        }
-
-        .changelog {
-            background: var(--bg-secondary);
-            border: 1px solid var(--border-color);
-            border-radius: 12px;
-            padding: 25px;
-        }
-
-        .changelog h3 {
-            color: var(--accent-blue);
-            margin-bottom: 15px;
-        }
-
-        .changelog ul {
-            list-style: none;
-            padding-left: 0;
-        }
-
-        .changelog li {
-            padding: 8px 0;
-            color: var(--text-secondary);
-            border-bottom: 1px solid var(--border-color);
-        }
-
-        .changelog li:last-child {
-            border-bottom: none;
-        }
-
-        .changelog li::before {
-            content: '✓';
-            color: var(--accent-green);
             margin-right: 10px;
         }
 
-        footer {
-            background: var(--bg-secondary);
-            border-top: 1px solid var(--border-color);
-            padding: 40px 20px;
-            text-align: center;
+        .section {
+            background: #2d2d2d;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
         }
 
-        footer p {
-            color: var(--text-secondary);
-            font-size: 0.9rem;
+        code {
+            background-color: #3e3e3e;
+            padding: 2px 5px;
+            border-radius: 4px;
+            color: #e0e0e0;
         }
 
-        footer a {
-            color: var(--accent-blue);
+        a {
+            color: #4daafc;
             text-decoration: none;
         }
 
-        footer a:hover {
+        a:hover {
             text-decoration: underline;
-        }
-
-        .support-links {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            margin-top: 20px;
-        }
-
-        .support-link {
-            padding: 10px 20px;
-            border-radius: 6px;
-            text-decoration: none;
-            font-weight: 500;
-            transition: all 0.2s ease;
-        }
-
-        .support-link.patreon {
-            background: #ff424d;
-            color: white;
-        }
-
-        .support-link.paypal {
-            background: #0070ba;
-            color: white;
-        }
-
-        .support-link:hover {
-            transform: translateY(-2px);
-            opacity: 0.9;
         }
     </style>
 </head>
 
 <body>
-    <div class="hero">
-        <h1>Carbonite (Ascension)</h1>
-        <p class="subtitle">Multi-module Mapping and Questing Suite - Stabilized for Project Ascension</p>
 
-        <div class="badges">
-            <span class="badge version">v3.34-Ascension</span>
-            <span class="badge wow">3.3.5a Compatible</span>
-            <span class="badge platform">Project Ascension</span>
-        </div>
-
-        <div class="cta-buttons">
-            <a href="https://github.com/Xurkon/PA-Carbonite/releases/latest" class="btn btn-primary">
-                ⬇️ Download
-            </a>
-            <a href="https://github.com/Xurkon/PA-Carbonite" class="btn btn-secondary">
-                📂 View on GitHub
-            </a>
-        </div>
+    <div class="section">
+        <h1>Carbonite (Project Ascension Edition)</h1>
+        <p>
+            <img src="https://img.shields.io/badge/Version-3.34--Ascension-green?style=for-the-badge" class="badge">
+            <img src="https://img.shields.io/badge/Game-Project%20Ascension-blue?style=for-the-badge" class="badge">
+        </p>
+        <p>Maintained by <strong>Xurkon</strong>.</p>
     </div>
 
-    <div class="container">
-        <section>
-            <h2>Overview</h2>
-            <p style="color: var(--text-secondary); margin-bottom: 20px;">Carbonite is a comprehensive addon that
-                provides advanced mapping, questing, and information tools. This edition has been specifically patched
-                and stabilized to eliminate lua errors and performance issues encountered on the Project Ascension
-                client.</p>
-
-            <div class="features-grid">
-                <div class="feature-card">
-                    <h3>🗺️ Advanced Mapping</h3>
-                    <p>High-performance map with smooth zooming, custom icons, and integrated node tracking for
-                        gathering.</p>
-                </div>
-                <div class="feature-card">
-                    <h3>📜 Quest Integration</h3>
-                    <p>Automated quest tracking, objective locations, and history database for efficient leveling.</p>
-                </div>
-                <div class="feature-card">
-                    <h3>🛡️ Stabilized Core</h3>
-                    <p>Dozens of nil-pointer and logic fixes tailored for the unique Ascension 3.3.5 environment.</p>
-                </div>
-                <div class="feature-card">
-                    <h3>🔧 FarmHud Ready</h3>
-                    <p>Includes built-in compatibility checks to prevent conflicts with map-overlay addons like FarmHud.
-                    </p>
-                </div>
-            </div>
-        </section>
-
-        <section>
-            <h2>Latest Fixes (v3.34-Ascension)</h2>
-            <div class="changelog">
-                <h3>Core Stabilization</h3>
-                <ul>
-                    <li>Fixed <code>table index is nil</code> crash when map data is missing (InT1).</li>
-                    <li>Fixed nil reference to <code>Win1</code> window frame (ShU1).</li>
-                    <li>Fixed nil map reference in <code>GPP</code>, <code>ToS1</code>, and <code>ALP</code> functions.
-                    </li>
-                    <li>Fixed nil tooltip options crash in <code>TP2</code>.</li>
-                    <li>Fixed number comparison with nil in map update logic (Line 18184).</li>
-                    <li>Fixed nil table index crash in <code>SCM1</code> (Line 23842).</li>
-                    <li>Fixed nil local 'inf' crash in <code>ITCZ</code> (Line 6978).</li>
-                    <li>Fixed nil GameMenuFrame crash in <code>ShowUIPanel</code> (Line 6871).</li>
-                    <li>Disabled "version is old" update notification.</li>
-                </ul>
-            </div>
-        </section>
-
-        <section>
-            <h2>Installation</h2>
-            <div class="feature-card">
-                <p>1. Download the latest release from the button above.</p>
-                <p>2. Extract all folders (Carbonite, CarboniteItems, etc.) to your <code>Interface\AddOns\</code>
-                    directory.</p>
-                <p>3. Ensure all modules are enabled in the character selection screen.</p>
-            </div>
-        </section>
+    <div class="section">
+        <h2>Overview</h2>
+        <p>This is a stabilized version of the classic Carbonite addon, specifically patched to resolve Lua errors and
+            crashes on the Project Ascension 3.3.5a client.</p>
     </div>
 
-    <footer>
-        <p>Maintained by <a href="https://github.com/Xurkon">Xurkon</a> for the Project Ascension Community</p>
+    <div class="section">
+        <h2>Recent Fixes (v3.34-Ascension)</h2>
+        <ul>
+            <li><strong>FarmHud Compatibility</strong> - Works seamlessly with FarmHud HUD mode.</li>
+            <li>Fixed <code>table index is nil</code> crash when map data is missing (InT1).</li>
+            <li>Fixed nil reference to <code>Win1</code> window frame (ShU1).</li>
+            <li>Fixed nil map reference in <code>GPP</code>, <code>ToS1</code>, and <code>ALP</code> functions.</li>
+            <li>Fixed nil tooltip options crash in <code>TP2</code>.</li>
+            <li>Fixed number comparison with nil in map update logic (Line 18184).</li>
+            <li>Fixed nil table index crash in <code>SCM1</code> (Line 23842).</li>
+            <li>Fixed nil local 'inf' crash in <code>ITCZ</code> (Line 6978).</li>
+            <li>Fixed nil GameMenuFrame crash in <code>ShowUIPanel</code> (Line 6871).</li>
+            <li>Disabled "version is old" update notification.</li>
+        </ul>
+    </div>
 
-        <div class="support-links">
-            <a href="https://www.patreon.com/Xurkon" class="support-link patreon">❤️ Patreon</a>
-            <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=kancerous@gmail.com"
-                class="support-link paypal">💙 PayPal</a>
-        </div>
-    </footer>
+    <div class="section">
+        <h2>Installation</h2>
+        <ol>
+            <li>Download the latest release.</li>
+            <li>Unzip into <code>Interface/AddOns/Carbonite</code>.</li>
+            <li>Launch the game and enable the addon.</li>
+        </ol>
+    </div>
+
+    <div class="section">
+        <h2>Legal</h2>
+        <p>Original Carbonite Copyright 2007-2010 Carbon Based Creations, LLC.</p>
+    </div>
+
 </body>
 
 </html>

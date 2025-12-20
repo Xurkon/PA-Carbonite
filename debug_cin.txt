@@ -1,0 +1,101 @@
+Function found at line 10181
+10181: function Nx.Fav:CIN()
+10182: local not1=Cartographer_Notes
+10183: local poi
+10184: if not1 then
+10185: local db=not1["db"]
+10186: if db then
+10187: local acc=db["account"]
+10188: if acc then
+10189: poi=acc["pois"]
+10190: end
+10191: end
+10192: end
+10193: if not poi then
+10194: Nx.prt("Cartographer notes missing")
+10195: return
+10196: end
+10197: local gXY=not1["getXY"]
+10198: if not gXY then
+10199: Nx.prt("Cartographer getXY missing")
+10200: return
+10201: end
+10202: local imC=0
+10203: for zNa,zDa in pairs(poi) do
+10204: if type(zDa)=="table" then
+10205: for id,dat in pairs(zDa) do
+10206: local mId=Nx.MNTI1[zNa]
+10207: if not mId then
+10208: Nx.prt("Unknown zone %s",zNa)
+10209: else
+10210: imC=imC+1
+10211: local x,y=gXY(id)
+10212: local icS=dat["icon"]
+10213: local nam=dat["title"] or icS or ""
+10214: local ico=1
+10215: for i,iNa in ipairs(self.NoI) do
+10216: if iNa==icS then
+10217: ico=i
+10218: end
+10219: end
+10220: local fav=self:GNF(mId)
+10221: local s=self:CrI("N",0,nam,ico,mId,x*100,y*100)
+10222: self:AdI1(fav,nil,s)
+10223: Nx.prt("Import %s %s %s %s %s",nam,zNa,mId,x,y)
+10224: end
+10225: end
+10226: end
+10227: end
+10228: Nx.prt("Imported %s notes",imC)
+10229: self:Upd()
+10230: end
+10231: function Nx.MapInitIconType(icT,drM)
+10232: local map=Nx.Map:GeM(1)
+10233: map:IIT(icT,drM)
+10234: end
+10235: function Nx.Map:SwO(id,sta3)
+10236: local opt=NxMapOpts.NXMaps[self.MaI3]
+10237: local cop=opt[id] or opt[0]
+10238: if cop~=self.CuO then
+10239: self.CuO=cop
+10240: if cop.NXPlyrFollow then
+10241: self:GoP()
+10242: end
+10243: if(not cop.NXPlyrFollow or sta3) and cop.NXMapPosX then
+10244: self.MPX=cop.NXMapPosX
+10245: self.MPY=cop.NXMapPosY
+10246: self.Sca=cop.NXScale
+10247: self.StT=1
+10248: elseif cop.NXPlyrFollow or Nx.IBG then
+10249: self:GCZ()
+10250: end
+10251: local mod1=opt[id] and tostring(id) or ""
+10252: self.Win1:SLM(mod1)
+10253: end
+10254: end
+10255: function Nx.Men:Cre(paF,wid)
+10256: local c2r=Nx.U_22
+10257: local men={}
+10258: self.Men1[men]=true
+10259: setmetatable(men,self)
+10260: men.Ite1={}
+10261: men.Alp=1
+10262: men.ClT=0
+10263: men.Wid=wid or 210
+10264: self.NaN=self.NaN+1
+10265: local nam=format("NxMenu%d",self.NaN)
+10266: local f=CreateFrame("Frame",nam,UIParent)
+10267: men.MaF=f
+10268: tinsert(UISpecialFrames,nam)
+10269: f.NxM=men
+10270: f:Hide()
+10271: f:SetScript("OnUpdate",self.OnU)
+10272: f:EnableMouse(true)
+10273: men:SeS4()
+10274: return men
+10275: end
+10276: function Nx.Sli:OMD(but)
+10277: local self=this.NxI
+10278: if but=="LeftButton" then
+10279: local frm=self.Frm
+10280: local x,y=Nx.U_IMO(frm)

@@ -1,0 +1,76 @@
+--- Range 5830 to 5860 ---
+5830: function Nx.Men:Ini()
+5831: self.Men1={}
+5832: self.I_ALPHAFADE=0
+5833: self.NaN=0
+5834: self.__index=self
+5835: Nx.MeI.__index=Nx.MeI
+5836: end
+5837: function Nx.Que.OP__3()
+5838: local self=Nx.Que
+5839: self.Wat:ShU1()
+5840: local pq=self.PaQ
+5841: if pq then
+5842: for nam in pairs(pq) do
+5843: local fou
+5844: for n=1,GetNumPartyMembers() do
+5845: local pna=UnitName("party" .. n)
+5846: if nam==pna then
+5847: fou=true
+5848: break
+5849: end
+5850: end
+5851: if not fou then
+5852: pq[nam]=nil
+5853: Nx.Tim:Sta("QPartyUpdate",1,self,self.PUT)
+5854: end
+5855: end
+5856: end
+5857: if GetNumRaidMembers()>0 then
+5858: return
+5859: end
+5860: if GetNumPartyMembers()==0 then
+
+--- Range 24760 to 24800 ---
+24760: end
+24761: end
+24762: end
+24763: Nx.ZoC=Nx["ZoneConnections"] or Nx.ZoC
+24764: for ci=1,self.CoC do
+24765: for n=0,999 do
+24766: local maI=ci*1000+n
+24767: local win1=woI[maI]
+24768: if not win1 then
+24769: break
+24770: end
+24771: local con2={}
+24772: win1.Con1=con2
+24773: for _,str in ipairs(Nx.ZoC) do
+24774: local fla,ta,tb,z1,x1a,x1b,y1a,y1b,z2,x2a,x2b,y2a,y2b,na1=strbyte(str,1,14)
+24775: fla=fla-35
+24776: local coT=(ta-35)*221+tb-35
+24777: local mI1=self.NTMI[z1-35]
+24778: local mI2=self.NTMI[z2-35]
+24779: if coT==1 and(maI==mI1 or(maI==mI2 and bit.band(fla,1)==1)) then
+24780: local co1=self:ITCZ(mI1)
+24781: local co2=self:ITCZ(mI2)
+24782: if co1==co2 then
+24783: na1=na1-35
+24784: local na11=na1==0 and "" or strsub(str,15,14+na1)
+24785: local i=15+na1
+24786: local na2=strbyte(str,i)
+24787: na2=na2 or 0
+24788: local na21=na2==0 and "" or strsub(str,i+1,i+na2)
+24789: local x1=((x1a-35)*221+x1b-35)/100
+24790: local y1=((y1a-35)*221+y1b-35)/100
+24791: local x2=((x2a-35)*221+x2b-35)/100
+24792: local y2=((y2a-35)*221+y2b-35)/100
+24793: if maI==mI2 then
+24794: mI1,mI2=mI2,mI1
+24795: x1,y1,x2,y2=x2,y2,x1,y1
+24796: end
+24797: local zco=con2[mI2] or {}
+24798: con2[mI2]=zco
+24799: if x1~=0 and y1~=0 then
+24800: local con={}
+

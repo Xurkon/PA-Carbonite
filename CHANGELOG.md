@@ -13,8 +13,8 @@
 - Fixed `attempt to index local 'inf'` error in `ITCZ` (Line ~6978).
 - Fixed `attempt to index global 'GameMenuFrame'` error in `ShowUIPanel` (Line ~6871).
 
+### Added
+- **FarmHud Compatibility** - Carbonite now works seamlessly with FarmHud addon. When FarmHud is active, Carbonite's minimap control is temporarily disabled to allow GatherMate2 and other minimap pins to display on the HUD.
+
 ### Changed
 - Disabled Carbonite's internal version check and update notification.
-
-
-

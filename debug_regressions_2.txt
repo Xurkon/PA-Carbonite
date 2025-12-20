@@ -1,0 +1,86 @@
+--- Range 24820 to 24860 ---
+24820: if not pop then
+24821: pop={["whileDead"]=1,["hideOnEscape"]=1,["timeout"]=0,}
+24822: StaticPopupDialogs["NxMsg"]=pop
+24823: end
+24824: pop["text"]=msg
+24825: pop["button1"]=f1T
+24826: pop["OnAccept"]=fu1
+24827: pop["button2"]=f2T
+24828: pop["OnCancel"]=fu2
+24829: StaticPopup_Show("NxMsg")
+24830: end
+24831: function Nx.Fav:PIT(dat)
+24832: local zon=tonumber(strsub(dat,1,2),16)
+24833: local id=Nx.NTMI[zon]
+24834: local x=tonumber(strsub(dat,3,5),16)/4090*100
+24835: local y=tonumber(strsub(dat,6,8),16)/4090*100
+24836: local dLv=(strbyte(dat,9) or 35)-35
+24837: return id,x,y+dLv*100
+24838: end
+24839: function Nx:ReC()
+24840: local ch=self.CuC
+24841: local map=self.Map:GeM(1)
+24842: if map.RMI then
+24843: ch["Pos"]=format("%d^%f^%f",map.RMI,map.PRZX,map.PRZY)
+24844: end
+24845: ch["Time"]=time()
+24846: ch["Level"]=UnitLevel("player")
+24847: if ch["Level"]>ch["LLevel"] then
+24848: ch["LLevel"]=ch["Level"]
+24849: ch["LvlTime"]=time()
+24850: ch["LXP"]=UnitXP("player")
+24851: ch["LXPMax"]=UnitXPMax("player")
+24852: ch["LXPRest"]=GetXPExhaustion() or 0
+24853: end
+24854: ch["Money"]=GetMoney()
+24855: ch["XP"]=UnitXP("player")
+24856: ch["XPMax"]=UnitXPMax("player")
+24857: ch["XPRest"]=GetXPExhaustion() or 0
+24858: ch["ArenaPts"]=GetArenaCurrency()
+24859: ch["Honor"]=GetHonorCurrency()
+24860: if self.War.TiP then
+
+--- Range 6960 to 7000 ---
+6960: cT.Ite=-9
+6961: cT.ItD=cDa
+6962: end
+6963: sort(arT,function(a,b) return a.Nam<b.Nam end)
+6964: end
+6965: sort(fol,function(a,b) return a.Nam<b.Nam end)
+6966: end
+6967: function Nx.NXMiniMapBut:M_OSA(ite)
+6968: Nx.ASBOP=ite:GetChecked()
+6969: if AuctionFrame and AuctionFrame:IsShown() then
+6970: AuctionFrameBrowse_Update()
+6971: end
+6972: end
+6973: function Nx.Que:IOMD(frm)
+6974: local cur=self.IHC
+6975: if cur then
+6976: self.IMC=cur
+6977: self.IMOI=self.IHOI
+6978: local qSt=Nx:GeQ(cur.QId)
+6979: self.IMIW:SetChecked(qSt=="W")
+6980: self.IcM:Ope()
+6981: end
+6982: end
+6983: function Nx.Map:ITCZ(maI)
+6984: if maI>=10000 then
+6985: return floor(maI/1000)-10,0
+6986: end
+6987: local inf=self.MWI[maI]
+6988: if not inf then return 9,0 end
+6989: return inf.Con or 9,inf.Zon or 0
+6990: end
+6991: function Nx.Soc.Lis:M_OPA()
+6992: local nam=UnitName("target")
+6993: if nam and UnitIsPlayer("target") and UnitIsEnemy("player","target") then
+6994: self:PuA1(nam,UnitLevel("target"),UnitClass("target"))
+6995: self:Upd()
+6996: else
+6997: Nx:SEB("Add punk name",self.MSN1 or Nx.Soc.LLP or "",self,self.PAA)
+6998: end
+6999: end
+7000: function Nx.UEv:AdH1(nam)
+
