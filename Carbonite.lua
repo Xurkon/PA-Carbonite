@@ -3481,6 +3481,13 @@ Key Bindings you can set:
   White color - is being tracked
   Non white colors match the same quest colors as described above.
 ]],[[
+|cffffffffChanges: 3.34-Ascension|r
+
+Fixed multiple nil index errors (ToS1, GPP, ShU1, ALP, TP2, SCM1, ITCZ).
+Fixed nil comparison in map update logic.
+Fixed table index nil error in InT1.
+Disabled internal version check.
+]],[[
 |cffffffffChanges: 3.34|r
 
   Fixed errors from game changes to chat edit box.
