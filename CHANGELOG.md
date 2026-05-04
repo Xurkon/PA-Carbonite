@@ -18,3 +18,6 @@
 
 ### Changed
 - Disabled Carbonite's internal version check and update notification.
+
+## [Unreleased] - Test Changelog Diff
+- Verify changelog diff display
